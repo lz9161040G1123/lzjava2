@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//dtd Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lzdemo2.mapper.Trademapper">
+    <select id="findall" resultType="com.example.lzdemo2.entity.trade">
+        SELECT * FROM trade
+    </select>
+    <insert id="insertbyid" parameterType="INTEGER">
+        INSERT INTO trade (`ID`, `order_id`) VALUES (#{ID}, '1234567');
+    </insert>
+    <insert id="insertbyid2" >
+        INSERT INTO trade (`ID`, `order_id`) VALUES (#{ID}, #{order_id});
+    </insert>
+    <delete id="deletebyid" parameterType="INTEGER">
+        delete from trade where ID = #{ID} ;
+    </delete>
+    <delete id="deletebyid2" >
+        delete from trade where ID = #{customerid} ;
+    </delete>
+</mapper>
+

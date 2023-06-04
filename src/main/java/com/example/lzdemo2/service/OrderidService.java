@@ -9,11 +9,11 @@ import java.util.List;
 
 @Service
 public class OrderidService {
-    @Autowired
-    private OrderIdmapper orderIdmapper;
-    public List<orderid> findOrderid()
-    {
-        return  orderIdmapper.findorderid();
+    public List<orderid> findOrderid() {
+        return null;
     }
+//    {
+//        return  orderIdmapper.findorderid();
+//    }
 
 }

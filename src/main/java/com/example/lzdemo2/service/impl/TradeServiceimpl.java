@@ -5,10 +5,12 @@ import com.example.lzdemo2.mapper.Trademapper;
 import com.example.lzdemo2.service.TradeService;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class TradeServiceimpl extends TradeService {
+@Service
+public class TradeServiceimpl implements TradeService {
     @Autowired
     private Trademapper trademapper;
 

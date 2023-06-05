@@ -5,10 +5,13 @@ import com.example.lzdemo2.mapper.OrderIdmapper;
 import com.example.lzdemo2.service.OrderidService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class Orderidserviceimpl extends OrderidService {
+@Service
+public class Orderidserviceimpl implements OrderidService {
+
     @Autowired
     public OrderIdmapper orderIdmapper;
 

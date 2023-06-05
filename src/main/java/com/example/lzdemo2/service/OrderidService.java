@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class OrderidService {
-    public List<orderid> findOrderid() {
+
+public interface OrderidService {
+    public default List<orderid> findOrderid() {
         return null;
     }
 //    {

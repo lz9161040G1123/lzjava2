@@ -48,8 +48,6 @@ public class TradeServiceimpl implements TradeService {
     @Override
     public  void Insert(trade trade1) throws Exception {
 
-//        trade1.setID(10);
-//        trade1.setOrder_id("test");
         if(trade1.getID() == 15) {
             throw new Exception("lllllex");
         }

@@ -8,23 +8,26 @@ import java.util.List;
 
 public  interface TradeService {
 
-    public default List<trade> findAll() {
+     default List<trade> findAll() {
         return null;
     }
 
-    public default void InserbyId(Integer ID) {
+     default void InserbyId(Integer ID) {
 
     }
 
-    public default void InserbyId2(Integer ID, String orderId){
+     default void InserbyId2(Integer ID, String orderId){
 
 
     }
-    public default void DeletebyID(Integer ID){
+     default void DeletebyID(Integer ID){
 
 
     }
-    public default void DeletebyID2(Integer ID){
+     default void DeletebyID2(Integer ID){
+    }
+
+      default void Insert(trade trade1) throws Exception {
     }
 
 }

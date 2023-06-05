@@ -9,11 +9,9 @@ import java.util.List;
 
 
 public interface OrderidService {
-    public default List<orderid> findOrderid() {
+     default List<orderid> findOrderid() {
         return null;
     }
-//    {
-//        return  orderIdmapper.findorderid();
-//    }
+
 
 }

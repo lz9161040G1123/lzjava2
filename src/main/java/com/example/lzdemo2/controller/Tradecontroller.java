@@ -1,5 +1,6 @@
 package com.example.lzdemo2.controller;
 
+import com.example.lzdemo2.entity.Response;
 import com.example.lzdemo2.entity.orderid;
 import com.example.lzdemo2.entity.trade;
 import com.example.lzdemo2.mapper.OrderIdmapper;
@@ -42,9 +43,36 @@ public class Tradecontroller {
          tradeService.InserbyId(ID);
 
     }
+
+    @RequestMapping("/insert3")
+    public Response insert3(trade trade1){
+        try {
+            tradeService.Insert(trade1);
+        }
+        catch (Exception e)
+        {
+            Response response = new Response();
+            response.setCode(1);
+            response.setErrno(1);
+            response.setMsg(e.toString());
+            return response;
+        }
+        Response response = new Response();
+        response.setCode(0);
+        response.setErrno(0);
+        response.setMsg("success");
+        return response;
+
+
+
+
+
+
+    }
     @RequestMapping("/insert2")
     public void insert2(Integer ID,String orderID){
-        tradeService.InserbyId2(ID,orderID);
+
+            tradeService.InserbyId2(ID, orderID);
 
     }
     @RequestMapping("/delete")

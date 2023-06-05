@@ -16,5 +16,27 @@
     <delete id="deletebyid2" >
         delete from trade where ID = #{customerid} ;
     </delete>
+    <insert id="insert" parameterType="com.example.lzdemo2.entity.trade"  >
+
+
+        insert into trade
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="ID != null">
+                ID,
+            </if>
+            <if test="order_id != null">
+                order_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="ID != null">
+                #{ID,jdbcType = INTEGER},
+            </if>
+            <if test="order_id != null">
+                #{order_id,jdbcType = VARCHAR}
+            </if>
+        </trim>
+
+    </insert>
 </mapper>
 

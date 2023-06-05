@@ -14,4 +14,5 @@ public interface Trademapper {
 
     void deletebyid(Integer ID);
     void deletebyid2(@Param("customerid") Integer ID);
+    void insert(trade trade1);
 }

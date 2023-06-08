@@ -42,6 +42,6 @@
                              type="XMLMAPPER" />
 
         <!-- tableName:数据库表名 domainObjectName:对应生成实体名称-->
-        <table tableName="trade" domainObjectName="Trade"/>
+        <table tableName="student" domainObjectName="Student"/>
     </context>
 </generatorConfiguration>

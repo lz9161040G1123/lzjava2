@@ -1,8 +1,9 @@
 package com.example.lzdemo2.controller;
 
 import com.example.lzdemo2.entity.Response;
+import com.example.lzdemo2.entity.Trade;
 import com.example.lzdemo2.entity.orderid;
-import com.example.lzdemo2.entity.trade;
+import com.example.lzdemo2.entity.Trade;
 import com.example.lzdemo2.mapper.OrderIdmapper;
 import com.example.lzdemo2.service.OrderidService;
 import com.example.lzdemo2.service.TradeService;
@@ -27,25 +28,26 @@ public class Tradecontroller {
         return new Animal("dog", 10);
     }
 
-    @RequestMapping("/test3")
-    public List<trade> gettrade(){
-        return tradeService.findAll();
+//    @RequestMapping("/test3")
+//    public List<trade> gettrade(){
+//        return tradeService.findAll();
+//
+//    }
 
-    }
-
-    @RequestMapping("/test5")
-    public List<orderid> getorderid(){
-        return orderidService.findOrderid();
+    @RequestMapping("/select")
+    public List<Trade> getorderid(){
+        return  tradeService.select();
+//        return orderidService.findOrderid();
 
     }
     @RequestMapping("/insert")
-    public void insert(Integer ID){
-         tradeService.InserbyId(ID);
+    public void insert(Trade trade){
+         tradeService.InsertTrade(trade);
 
     }
 
     @RequestMapping("/insert3")
-    public Response insert3(trade trade1){
+    public Response insert3(Trade trade1){
         try {
             tradeService.Insert(trade1);
         }
@@ -64,15 +66,11 @@ public class Tradecontroller {
         return response;
 
 
-
-
-
-
     }
     @RequestMapping("/insert2")
     public void insert2(Integer ID,String orderID){
 
-            tradeService.InserbyId2(ID, orderID);
+//            tradeService.InserbyId2(ID, orderID);
 
     }
     @RequestMapping("/delete")
@@ -82,7 +80,7 @@ public class Tradecontroller {
     }
     @RequestMapping("/delete2")
     public void delete2(Integer ID){
-        tradeService.DeletebyID2(ID);
+//        tradeService.DeletebyID2(ID);
 
     }
 }

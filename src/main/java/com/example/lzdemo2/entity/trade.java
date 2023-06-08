@@ -1,27 +1,35 @@
 package com.example.lzdemo2.entity;
 
-public class trade {
-    private int ID;
-    private String order_id;
+public class Trade {
+    private Integer id;
 
-    public int getID() {
-        return ID;
+    private String orderId;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getOrder_id() {
-        return order_id;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(String order_id) {
-        this.order_id = order_id;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
-    public trade(int ID, String order_id) {
-        this.ID = ID;
-        this.order_id = order_id;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
+        sb.append(", orderId=").append(orderId);
+        sb.append("]");
+        return sb.toString();
     }
 }

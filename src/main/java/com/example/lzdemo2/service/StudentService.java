@@ -15,6 +15,10 @@ public interface StudentService {
         return 0;
     }
 
+    default int insert2(Student student) {
+        return 0;
+    }
+
     default int update(Student student){
         return 0;
     }

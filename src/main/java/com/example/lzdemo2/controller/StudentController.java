@@ -26,6 +26,12 @@ public class StudentController {
 
     }
 
+    @RequestMapping("/insert2/student")
+    public int insert2(Student student){
+        return studentService.insert2(student);
+
+    }
+
     @RequestMapping("/update/student")
     public int update(Student student){
         return studentService.update(student);

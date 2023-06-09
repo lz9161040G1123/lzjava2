@@ -28,6 +28,10 @@ public class StudentServiceImpl implements StudentService {
     public int insert(Student student){
         return studentMapper.insertSelective(student);
     }
+    @Override
+    public int insert2(Student student){
+        return studentMapper.insert(student);
+    }
 
     @Override
     public int update(Student student){
